@@ -134,7 +134,7 @@
         <a-button type="primary" @click="departOk">确认</a-button>
       </template>
 
-      <a-form>
+<!--      <a-form>
         <a-form-item
           :labelCol="{span:4}"
           :wrapperCol="{span:20}"
@@ -156,7 +156,7 @@
             </a-select-option>
           </a-select>
         </a-form-item>
-      </a-form>
+      </a-form>-->
 
 
 

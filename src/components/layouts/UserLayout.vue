@@ -4,18 +4,18 @@
       <div class="top">
         <div class="header">
           <a href="/">
-            <img src="~@/assets/logo.svg" class="logo" alt="logo">
-            <span class="title">Jeecg Boot</span>
+            <img src="~@/assets/logo.png" class="logo" alt="logo">
+            <span class="title"> 考务管理系统</span>
           </a>
         </div>
         <div class="desc">
-          Jeecg Boot 是中国最具影响力的 企业级 快速开发平台
+
         </div>
       </div>
 
       <route-view></route-view>
 
-      <div class="footer">
+<!--      <div class="footer">
         <div class="links">
           <a href="http://doc.jeecg.com" target="_blank">帮助</a>
           <a href="https://github.com/zhangdaiscott/jeecg-boot" target="_blank">隐私</a>
@@ -24,7 +24,7 @@
         <div class="copyright">
           Copyright &copy; 2019 <a href="http://www.jeecg.com" target="_blank">JEECG开源社区</a> 出品
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -86,7 +86,7 @@
             display: inline-block;
             line-height: 1;
             vertical-align: middle;
-            margin-left: -12px;
+            margin-left: -2px;
             margin-top: -10px;
             opacity: 0.8;
           }

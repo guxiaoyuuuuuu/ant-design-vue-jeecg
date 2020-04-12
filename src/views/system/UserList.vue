@@ -26,8 +26,8 @@
 
           <template v-if="toggleSearchStatus">
             <a-col :md="6" :sm="8">
-              <a-form-item label="真实名字">
-                <a-input placeholder="请输入真实名字" v-model="queryParam.realname"></a-input>
+              <a-form-item label="用户姓名">
+                <a-input placeholder="请输入用户姓名" v-model="queryParam.realname"></a-input>
               </a-form-item>
             </a-col>
 
@@ -71,7 +71,7 @@
       <a-upload name="file" :showUploadList="false" :multiple="false" :headers="tokenHeader" :action="importExcelUrl" @change="handleImportExcel">
         <a-button type="primary" icon="import">导入</a-button>
       </a-upload>
-      <a-button type="primary" icon="hdd" @click="recycleBinVisible=true">回收站</a-button>
+    <!--  <a-button type="primary" icon="hdd" @click="recycleBinVisible=true">回收站</a-button>-->
       <a-dropdown v-if="selectedRowKeys.length > 0">
         <a-menu slot="overlay" @click="handleMenuClick">
           <a-menu-item key="1">
@@ -154,10 +154,10 @@
                   <a>解冻</a>
                 </a-popconfirm>
               </a-menu-item>
-
+<!--
               <a-menu-item>
                 <a href="javascript:;" @click="handleAgentSettings(record.username)">代理人</a>
-              </a-menu-item>
+              </a-menu-item>-->
 
             </a-menu>
           </a-dropdown>
@@ -174,8 +174,8 @@
 
     <sys-user-agent-modal ref="sysUserAgentModal"></sys-user-agent-modal>
 
-    <!-- 用户回收站 -->
-    <user-recycle-bin-modal :visible.sync="recycleBinVisible" @ok="modalFormOk"/>
+  <!--  &lt;!&ndash; 用户回收站 &ndash;&gt;
+    <user-recycle-bin-modal :visible.sync="recycleBinVisible" @ok="modalFormOk"/>-->
 
   </a-card>
 </template>
@@ -255,12 +255,12 @@
             width: 100,
             dataIndex: 'phone'
           },
-          {
+ /*         {
             title: '部门',
             align: "center",
             width: 180,
             dataIndex: 'orgCode'
-          },
+          },*/
           {
             title: '状态',
             align: "center",
