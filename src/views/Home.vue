@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <div class="banner">
-      <img alt="Vue logo" style="width: 64px; height: 64px" src="../assets/logo.png">
-      <h3 style="margin-top: 1rem">Welcome to Your Vue.js App</h3>
+      <img alt="Vue logo" style="width: 840px; height: 640px" src="../assets/logo.png">
+      <h3 style="margin-top: 1rem">Welcome to 考务管理系统</h3>
     </div>
 
-    <br/>
+   <!-- <br/>
 
     <h2># Trend 组件 </h2>
 
@@ -105,7 +105,7 @@
         :total="12321"
         status="up"
         :sub-total="17.1"></number-info>
-    </a-card>
+    </a-card>-->
   </div>
 </template>
 
