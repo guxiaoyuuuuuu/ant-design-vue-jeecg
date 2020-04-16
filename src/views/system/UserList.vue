@@ -229,13 +229,11 @@
             dataIndex: 'realname',
           },
           {
-            title: '头像',
+            title: '学号/教师编号',
             align: "center",
-            width: 120,
-            dataIndex: 'avatar',
-            scopedSlots: {customRender: "avatarslot"}
+            width: 100,
+            dataIndex: 'workNo'
           },
-
           {
             title: '性别',
             align: "center",
@@ -244,16 +242,17 @@
             sorter: true
           },
           {
-            title: '生日',
-            align: "center",
-            width: 100,
-            dataIndex: 'birthday'
-          },
-          {
             title: '手机号码',
             align: "center",
             width: 100,
             dataIndex: 'phone'
+          },
+          {
+            title: '头像',
+            align: "center",
+            width: 120,
+            dataIndex: 'avatar',
+            scopedSlots: {customRender: "avatarslot"}
           },
  /*         {
             title: '部门',
@@ -262,7 +261,7 @@
             dataIndex: 'orgCode'
           },*/
           {
-            title: '状态',
+            title: '账号状态',
             align: "center",
             width: 80,
             dataIndex: 'status_dictText'

@@ -100,12 +100,14 @@
           <j-image-upload class="avatar-uploader" text="上传" v-model="fileList" ></j-image-upload>
         </a-form-item>
 
+<!--
         <a-form-item label="生日" :labelCol="labelCol" :wrapperCol="wrapperCol">
           <a-date-picker
             style="width: 100%"
             placeholder="请选择生日"
             v-decorator="['birthday', {initialValue:!model.birthday?null:moment(model.birthday,dateFormat)}]"/>
         </a-form-item>
+-->
 
         <a-form-item label="性别" :labelCol="labelCol" :wrapperCol="wrapperCol">
           <a-select v-decorator="[ 'sex', {}]" placeholder="请选择性别">
