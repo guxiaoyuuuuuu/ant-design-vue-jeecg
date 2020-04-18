@@ -13,6 +13,9 @@
         <a-form-item label="学号" :labelCol="labelCol" :wrapperCol="wrapperCol">
           <a-input v-decorator="[ 'studentNo', validatorRules.studentNo]" placeholder="请输入学号"></a-input>
         </a-form-item>
+        <a-form-item label="科目编号" :labelCol="labelCol" :wrapperCol="wrapperCol">
+          <a-input v-decorator="[ 'courseNo', validatorRules.courseNo]" placeholder="请输入科目编号"></a-input>
+        </a-form-item>
         <a-form-item label="成绩" :labelCol="labelCol" :wrapperCol="wrapperCol">
           <a-input-number v-decorator="[ 'score', validatorRules.score]" placeholder="请输入成绩" style="width: 100%"/>
         </a-form-item>
@@ -54,6 +57,9 @@
           studentNo: {rules: [
             {required: true, message: '请输入学号!'},
           ]},
+          courseNo: {rules: [
+            {required: true, message: '请输入科目编号!'},
+          ]},
           score: {rules: [
             {required: true, message: '请输入成绩!'},
           ]},
@@ -75,7 +81,7 @@
         this.model = Object.assign({}, record);
         this.visible = true;
         this.$nextTick(() => {
-          this.form.setFieldsValue(pick(this.model,'studentNo','score'))
+          this.form.setFieldsValue(pick(this.model,'studentNo','courseNo','score'))
         })
       },
       close () {
@@ -118,7 +124,7 @@
         this.close()
       },
       popupCallback(row){
-        this.form.setFieldsValue(pick(row,'studentNo','score'))
+        this.form.setFieldsValue(pick(row,'studentNo','courseNo','score'))
       }
       
     }

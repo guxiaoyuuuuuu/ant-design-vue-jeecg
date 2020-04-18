@@ -9,13 +9,20 @@
               <a-input placeholder="请输入学号" v-model="queryParam.studentNo"></a-input>
             </a-form-item>
           </a-col>
-          <a-col :xl="10" :lg="11" :md="12" :sm="24">
-            <a-form-item label="成绩">
-              <a-input placeholder="请输入最小值" class="query-group-cust" v-model="queryParam.score_begin"></a-input>
-              <span class="query-group-split-cust"></span>
-              <a-input placeholder="请输入最大值" class="query-group-cust" v-model="queryParam.score_end"></a-input>
+          <a-col :xl="6" :lg="7" :md="8" :sm="24">
+            <a-form-item label="科目编号">
+              <a-input placeholder="请输入科目编号" v-model="queryParam.courseNo"></a-input>
             </a-form-item>
           </a-col>
+          <template v-if="toggleSearchStatus">
+            <a-col :xl="10" :lg="11" :md="12" :sm="24">
+              <a-form-item label="成绩">
+                <a-input placeholder="请输入最小值" class="query-group-cust" v-model="queryParam.score_begin"></a-input>
+                <span class="query-group-split-cust"></span>
+                <a-input placeholder="请输入最大值" class="query-group-cust" v-model="queryParam.score_end"></a-input>
+              </a-form-item>
+            </a-col>
+          </template>
           <a-col :xl="6" :lg="7" :md="8" :sm="24">
             <span style="float: left;overflow: hidden;" class="table-page-search-submitButtons">
               <a-button type="primary" @click="searchQuery" icon="search">查询</a-button>
@@ -127,9 +134,24 @@
         // 表头
         columns: [
           {
+            title: '#',
+            dataIndex: '',
+            key:'rowIndex',
+            width:60,
+            align:"center",
+            customRender:function (t,r,index) {
+              return parseInt(index)+1;
+            }
+          },
+          {
             title:'学号',
             align:"center",
             dataIndex: 'studentNo'
+          },
+          {
+            title:'科目编号',
+            align:"center",
+            dataIndex: 'courseNo'
           },
           {
             title:'成绩',

@@ -141,11 +141,21 @@
             align:"center",
             dataIndex: 'courseNo'
           },
+/*          {
+            title:'科目名称',
+            align:"center",
+            dataIndex: 'courseName'
+          },*/
           {
             title:'教室考场号',
             align:"center",
             dataIndex: 'examNo'
           },
+/*          {
+            title:'教室名称',
+            align:"center",
+            dataIndex: 'examName'
+          },*/
           {
             title:'考试批次号',
             align:"center",
@@ -156,6 +166,11 @@
             align:"center",
             dataIndex: 'teacherNo'
           },
+ /*         {
+            title:'教师名称',
+            align:"center",
+            dataIndex: 'realname'
+          },*/
           {
             title: '操作',
             dataIndex: 'action',
